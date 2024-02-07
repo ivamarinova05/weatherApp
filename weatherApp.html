@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- CSS link -->
+        <link rel="stylesheet" href="./weatherApp.css">
+    
+    
+        <!-- Font awsome link -->
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous" /> -->
+
+        <script src="https://kit.fontawesome.com/cfb53b02f5.js" crossorigin="anonymous"></script>
+    
+    
+        <!-- Google fonts link -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    
+        <title>Weather App</title>
+    </head>
+    <body class = "main">
+        <div class="container">
+            <fieldset>
+                <input type="text" class="inputLocation" placeholder="Enter Location">
+                <button class="searchBtn"><i class="fas fa-search"></i></button>
+            </fieldset>
+            <div class="displayWeather">
+                <h1 class="city">--</h1>
+                <h2 class="temp">----°C</h2>
+                <p class="desc">---</p>
+                
+                <table class="highLowTemp">
+                    <tr>
+                        <td class="highestTemp"></td>
+                        <td class="lowestTemp"></td>
+                    </tr>
+                </table>
+
+                <div class="carousel-container">
+                    <div class="row">
+                        <div class="menu-prev-elem">
+                            <p></p>
+                            <button class="prev-item-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                            <p></p>
+                        </div>
+                        <div class="menu-item-1">
+                            <p class="menu-item-1-time"></p>
+                            <p class="menu-item-1-icon"><img></img></p>
+                            <p class="menu-item-1-deg"></p>
+                        </div>
+                        <div class="menu-item-2">
+                            <p class="menu-item-2-time"></p>
+                            <p class="menu-item-2-icon"><img></img></p>
+                            <p class="menu-item-2-deg"></p>
+                        </div>
+                        <div class="menu-item-3">
+                            <p class="menu-item-3-time"></p>
+                            <p class="menu-item-3-icon"><img></img></p>
+                            <p class="menu-item-3-deg"></p>
+                        </div>
+                        <div class="menu-item-4">
+                            <p class="menu-item-4-time"></p>
+                            <p class="menu-item-4-icon"><img></img></p>
+                            <p class="menu-item-4-deg"></p>
+                        </div>
+                        <div class="menu-item-5">
+                            <p class="menu-item-5-time"></p>
+                            <p class="menu-item-5-icon"><img></img></p>
+                            <p class="menu-item-5-deg"></p>
+                        </div>
+                        <div class="menu-next-elem">
+                            <p></p>
+                            <button class="next-item-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                            <p></p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <table>
+                    <tr>
+                        <th class="forecast" colspan="3"><i class="fa-regular fa-calendar"></i> 5-DAY FORECAST</th>
+                    </tr>
+                    <tr>
+                        <td class="day-1-day"></td>
+                        <td class="day-1-condition"></td>
+                        <td class="day-1-temp"></td>
+                    </tr>
+                    <tr>
+                        <td class="day-2-day"></td>
+                        <td class="day-2-condition"></td>
+                        <td class="day-2-temp"></td>
+                    </tr>
+                    <tr>
+                        <td class="day-3-day"></td>
+                        <td class="day-3-condition"></td>
+                        <td class="day-3-temp"></td>
+                    </tr>
+                    <tr>
+                        <td class="day-4-day"></td>
+                        <td class="day-4-condition"></td>
+                        <td class="day-4-temp"></td>
+                    </tr>
+                    <tr>
+                        <td class="day-5-day"></td>
+                        <td class="day-5-condition"></td>
+                        <td class="day-5-temp"></td>
+                    </tr>
+                </table>
+
+                <div class="row">
+                    <div class="column-1">
+                        <p class="rainfall-header"><i class="fa-solid fa-umbrella"></i> RAINFALL</p>
+                        <p class="rainfall-chance"></p>
+                        <p class="rainfall-precip"></p>
+                    </div>
+                    <div class="column-2">
+                        <p class="feels-like-header"><i class="fa-solid fa-temperature-empty"></i> FEELS LIKE</p>
+                        <p class="feels-like"></p>
+                        <p class="relation-to-actual-temp"></p>
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+    
+        <!-- Link to Javascript -->
+        <script src="./weatherApp.js"></script>
+        </div>
+    </body>
+</html>
